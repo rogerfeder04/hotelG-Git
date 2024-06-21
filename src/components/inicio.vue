@@ -3,33 +3,42 @@
     <q-carousel
       animated
       v-model="slide"
-      arrows
       navigation
       infinite
+      :autoplay="autoplay"
+      arrows
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      @mouseenter="autoplay = false"
+      @mouseleave="autoplay = true"
     >
       <q-carousel-slide :name="1" :img-src="image1" />
       <q-carousel-slide :name="2" :img-src="image2" />
       <q-carousel-slide :name="3" :img-src="image3" />
       <q-carousel-slide :name="4" :img-src="image4" />
     </q-carousel>
-    
-    <p>explora nuestros colores</p> 
-    <h1 style="text-align: center">HOTEL RANCHO LOS TRES POTRILLOS</h1>
+    <div  class="litle">
+    <h4>Explora nuestros colores al atardecer</h4>
+    <h3> ⭐BIENVENIDOS A NUESTRO HOTEL⭐</h3>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-import image1 from '@/assets/imagenesHotel/inicio.jpg'
-import image2 from '@/assets/imagenesHotel/gallina.jpg'
-import image3 from '@/assets/imagenesHotel/hotel.jpeg'
-import image4 from '@/assets/imagenesHotel/pieza.jpg'
+import image1 from '@/assets/imagenH/cabaña8.jpg'
+import image2 from '@/assets/imagenH/cabaña6.jpg'
+import image3 from '@/assets/imagenH/cabaña5.jpg'
+import image4 from '@/assets/imagenH/cabaña10.jpg'
 
 export default {
   setup () {
     const slide = ref(1)
+    const autoplay = ref(true)
+
     return {
       slide,
+      autoplay,
       image1,
       image2,
       image3,
@@ -39,31 +48,14 @@ export default {
 }
 </script>
 
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.litle{
+  text-align: center;
+  color: rgb(5, 36, 26);
+}
 
-<!-- <div>
-  <div>  
-   <p>explora nuestros colores</p> 
-  <h1 style="text-align: center">HOTEL RANCHO LOS TRES POTRILLOS</h1>
-  <h2>VELEZ, KILOMETRO 3, VIA CHIPATA</h2>
-  <div> -->
-    <!-- <img :src="imageSrc" alt="Inicio"> importar imagen de script -->
-    <!-- <img src="../imagenesHotel/inicio.jpg" alt="IMG_hotel">
-  </div>
-  
-</div>
-
-  </div> -->
-
-
-
-
-<!-- 
-// import imageSrc from '../imagenesHotel/inicio.jpg';
-
-// export default {
-//   data() {
-//     return {
-//       imageSrc
-//     };
-//   }
-// }; -->
+h3{
+  color: rgb(5, 36, 26); 
+}
+</style>
