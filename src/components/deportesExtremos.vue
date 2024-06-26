@@ -5,7 +5,7 @@
       color="red"
       animated
       v-model="slide"
-      height="500px"
+      height="550px"
     >
       <q-carousel-slide name="first" :img-src="image2">
         <div class="absolute-bottom custom-caption">
@@ -14,6 +14,7 @@
             Paseos por los lugares mas motañosos de la región, disfrutando paisajes.
           </div>
         </div>
+        
       </q-carousel-slide>
       <q-carousel-slide name="second" :img-src="image1">
         <div class="absolute-bottom custom-caption">
@@ -26,7 +27,7 @@
         </div>
       </q-carousel-slide>
       <q-carousel-slide name="third" :img-src="image3">
-        <div class="absolute-bottom custom-caption">
+        <div class="absolute-bottom custom-caption"> <br>
           <div class="text-h2">EXCURSIÓN EN BUGGY</div>
           <div class="text-subtitle1">
             Este recorrido es perfecto tanto para principiantes
@@ -36,7 +37,22 @@
         </div>
       </q-carousel-slide>
     </q-carousel>
+    <div style="color: blue;">
+      ¡Atrévete a vivir una aventura única y emocionante en el paraíso
+       de los deportes extremos! Si eres un amante de la adrenalina y
+        estás buscando tu próxima escapada, no busques más. Nuestro destino 
+        ofrece una variedad inigualable de actividades para desafiar tus límites
+         y disfrutar al máximo de la naturaleza,Los deportes extremos ofrecen una mezcla emocionante
+          de riesgo controlado y habilidad técnica, donde los participantes desafían sus límites físicos 
+          y mentales. Desde el paracaidismo y el salto base hasta el alpinismo y el descenso en bicicleta de montaña,
+           estos deportes no solo ofrecen una descarga de adrenalina, sino también una conexión profunda con la naturaleza
+            y una sensación de logro personal. Los practicantes buscan constantemente nuevas formas de superar desafíos, 
+            explorar lugares remotos y experimentar la libertad intensa que solo los deportes extremos pueden proporcionar.
+                  
   </div>
+  
+  </div>
+  
 </template>
 
 <script>
@@ -48,7 +64,7 @@ import image3 from '../assets/imagenesHotel/bugy.jpg'
 export default {
   setup () {
     const slide = ref('first')
-    return {
+    return { 
       slide,
       image1,
       image2,
@@ -61,14 +77,16 @@ export default {
 <style scoped>
 .custom-caption {
   text-align: center;
-  padding: 12px;
+  padding: 1px;
   color: white;
   background-color: rgba(0, 0, 0, .7);
 }
-
+.q-carousel__slide{
+  height: 100%;
+}
 :deep(.q-carousel__arrow .q-icon) {
   color: #e113d3; /* Color de las flechas */
-  font-size: 28px; /* Tamaño de las flechas */
+  font-size: 38px; /* Tamaño de las flechas */
 }
 </style>
 

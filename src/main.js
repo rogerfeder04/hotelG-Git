@@ -1,4 +1,3 @@
-
 import { createApp } from 'vue'
 import { Quasar } from 'quasar'
 import { router } from './routes/routes.js'
@@ -20,6 +19,6 @@ myApp.use(Quasar, {
 })
 
 myApp.use(router)
+
 // Assumes you have a <div id="app"></div> in your index.html
 myApp.mount('#app')
-
